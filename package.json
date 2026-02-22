@@ -11,20 +11,20 @@
     "dependencies": {
         "@astrojs/cloudflare": "^12.6.12",
         "@astrojs/svelte": "^7.2.5",
-        "@tailwindcss/vite": "^4.1.18",
-        "astro": "^5.17.0",
+        "@tailwindcss/vite": "^4.2.0",
+        "astro": "^5.17.3",
         "luxon": "^3.7.2",
-        "svelte": "^5.49.0",
+        "svelte": "^5.53.2",
         "svelte-sonner": "^1.0.7",
-        "tailwindcss": "^4.1.18"
+        "tailwindcss": "^4.2.0"
     },
     "devDependencies": {
         "@types/luxon": "^3.7.1",
         "prettier": "^3.8.1",
         "prettier-plugin-astro": "^0.14.1",
         "prettier-plugin-organize-imports": "^4.3.0",
-        "prettier-plugin-svelte": "^3.4.1",
+        "prettier-plugin-svelte": "^3.5.0",
         "prettier-plugin-tailwindcss": "^0.7.2",
-        "wrangler": "^4.61.1"
+        "wrangler": "^4.67.0"
     }
 }

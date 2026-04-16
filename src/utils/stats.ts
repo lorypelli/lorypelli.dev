@@ -1,7 +1,7 @@
 import { stats } from './url';
 
 export default async function getStats(
-    type: 'general' | 'contributions' | 'languages',
+    type: 'general' | 'contributions' | 'languages' | 'spotify',
 ) {
     let url = '';
     switch (type) {
@@ -15,6 +15,10 @@ export default async function getStats(
         }
         case 'languages': {
             url = stats.url.languages;
+            break;
+        }
+        case 'spotify': {
+            url = stats.url.spotify;
             break;
         }
     }

@@ -11,6 +11,8 @@ export const stats = {
         contributions:
             'https://streak-stats.demolab.com/?user=LoryPelli&theme=dark&hide_border=true',
         languages:
-            'https://github-readme-stats.vercel.app/api/top-langs/?username=LoryPelli&theme=dark&hide_border=true&layout=compact',
+            'https://github-readme-stats.vercel.app/api/top-langs?username=LoryPelli&theme=dark&hide_border=true&layout=compact',
+        spotify:
+            'https://api.statusbadges.me/badge/spotify/604339998312890379?style=for-the-badge',
     },
 };

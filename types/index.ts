@@ -8,3 +8,13 @@ export interface GithubRepo {
     name: string;
     stargazers_count: number;
 }
+
+export enum UnitName {
+    YEARS = 'years',
+    MONTHS = 'months',
+    WEEKS = 'weeks',
+    DAYS = 'days',
+    HOURS = 'hours',
+    MINUTES = 'minutes',
+    SECONDS = 'seconds',
+}

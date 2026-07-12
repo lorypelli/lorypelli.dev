@@ -1,6 +1,7 @@
 <script lang="ts">
     import { DateTime } from 'luxon';
     import { SvelteDate } from 'svelte/reactivity';
+    import { UnitName } from '../../types';
     const currentYear = $state(new Date().getFullYear());
     const currentMonth = $state(new Date().getMonth() + 1);
     const currentDay = $state(new Date().getDay());
@@ -37,30 +38,19 @@
     });
 </script>
 
+{#snippet birthday(unit: number, name: UnitName)}
+    <div class="flex flex-col items-center">
+        <span>{Math.round(unit)}</span>
+        <span>{name}</span>
+    </div>
+{/snippet}
+
 <span>My birthday will be in:</span>
 <div class="flex gap-x-2">
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.years)}</span>
-        <span>Years</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.months)}</span>
-        <span>Months</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.days)}</span>
-        <span>Days</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.hours)}</span>
-        <span>Hours</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.minutes)}</span>
-        <span>Minutes</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span>{Math.round(diff.seconds)}</span>
-        <span>Seconds</span>
-    </div>
+    {@render birthday(diff.years, UnitName.YEARS)}
+    {@render birthday(diff.months, UnitName.MONTHS)}
+    {@render birthday(diff.days, UnitName.DAYS)}
+    {@render birthday(diff.hours, UnitName.HOURS)}
+    {@render birthday(diff.minutes, UnitName.MINUTES)}
+    {@render birthday(diff.seconds, UnitName.SECONDS)}
 </div>
